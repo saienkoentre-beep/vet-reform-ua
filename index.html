@@ -27,6 +27,8 @@
   --shadow-lg: 0 12px 48px rgba(8,8,14,0.14);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+#pillar-decentralization, #pillar-quality { scroll-margin-top: 90px; }
 body {
   font-family: 'Innerspace', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--light);
@@ -506,10 +508,9 @@ footer {
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="#">Про реформу</a>
-      <a href="#">Документи</a>
-      <a href="#">Моніторинг</a>
-      <a href="#">Контакти</a>
+      <a href="#pillar-decentralization">Децентралізація управління</a>
+      <a href="#pillar-quality">Якість освіти</a>
+      <a href="naglyadova-rada.html">Публічно-приватне партнерство</a>
     </nav>
     <div class="header-partners">
       <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
@@ -552,7 +553,7 @@ footer {
   <div class="modules-grid">
 
     <!-- 1. Децентралізація управління та фінансування -->
-    <a href="#" class="module-card mod-1">
+    <a href="#" class="module-card mod-1" id="pillar-decentralization">
       <div class="module-card-top">
         <div class="module-number">01</div>
         <div class="module-icon">🗺️</div>
@@ -566,7 +567,7 @@ footer {
     </a>
 
     <!-- 2. Забезпечення якості професійної освіти -->
-    <a href="#" class="module-card mod-2">
+    <a href="#" class="module-card mod-2" id="pillar-quality">
       <div class="module-card-top">
         <div class="module-number">02</div>
         <div class="module-icon">🎯</div>
