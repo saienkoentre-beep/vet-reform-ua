@@ -28,7 +28,6 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-#pillar-decentralization, #pillar-quality { scroll-margin-top: 90px; }
 body {
   font-family: 'Innerspace', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--light);
@@ -139,7 +138,7 @@ header {
   font-family: 'Innerspace', sans-serif;
   font-weight: 700;
   font-size: 44px;
-  color: #fff;
+  color: var(--mon-yellow);
   line-height: 1.15;
   margin-bottom: 18px;
   max-width: 1000px;
@@ -147,10 +146,9 @@ header {
   margin-right: auto;
   white-space: nowrap;
 }
-.hero h2 span { color: var(--mon-yellow); }
 .hero p {
   font-size: 17px;
-  color: rgba(255,255,255,0.75);
+  color: #fff;
   max-width: 820px;
   margin: 0 auto 36px;
   line-height: 1.7;
@@ -237,138 +235,21 @@ main { max-width: 1200px; margin: 0 auto; padding: 56px 24px 80px; }
   border-color: var(--mon-blue);
   box-shadow: 0 0 0 3px rgba(43,72,255,0.1), var(--shadow);
 }
-.module-card-top {
-  padding: 28px 28px 20px;
-  flex: 1;
-}
-.module-number {
-  font-family: 'Innerspace', sans-serif;
-  font-weight: 700;
-  font-size: 11px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.module-number::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-.module-icon {
-  width: 52px; height: 52px;
-  border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 24px;
-  margin-bottom: 16px;
+.module-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: var(--light);
 }
 .module-card h3 {
   font-family: 'Innerspace', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--mon-black);
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-.module-card p {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.65;
-}
-.module-card-bottom {
-  padding: 16px 28px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.module-status {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-}
-.status-active { background: #EAFAF1; color: #1E8449; }
-.status-draft  { background: #FEF9E7; color: #B7770D; }
-.status-soon   { background: #F5F5F5; color: #7F8C8D; }
-.module-arrow {
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  background: var(--light);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px;
-  transition: all 0.2s;
-}
-.module-card:hover .module-arrow {
-  background: var(--mon-blue);
-  color: white;
-}
-
-/* Кольори іконок по модулях */
-.mod-1 .module-icon { background: #EEF2FF; }
-.mod-2 .module-icon { background: #FFF8E7; }
-.mod-3 .module-icon { background: #EEF2FF; border: 2px solid var(--mon-blue); }
-
-/* ── PROGRESS SECTION ── */
-.progress-section {
-  background: #fff;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  padding: 36px 40px;
-  margin-bottom: 64px;
-}
-.progress-section h3 {
-  font-family: 'Innerspace', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.progress-list { display: flex; flex-direction: column; gap: 18px; }
-.progress-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.progress-item-name {
-  width: 220px;
-  font-size: 14px;
-  font-weight: 500;
-  flex-shrink: 0;
-}
-.progress-bar-wrap {
-  flex: 1;
-  background: var(--light);
-  border-radius: 8px;
-  height: 10px;
-  overflow: hidden;
-}
-.progress-bar-fill {
-  height: 100%;
-  border-radius: 8px;
-  background: linear-gradient(90deg, var(--mon-blue), #4D6AFF);
-  transition: width 1s ease;
-}
-.progress-bar-fill.yellow {
-  background: linear-gradient(90deg, var(--mon-yellow), #FFC933);
-}
-.progress-bar-fill.green {
-  background: linear-gradient(90deg, #27AE60, #2ECC71);
-}
-.progress-pct {
-  font-family: 'Innerspace', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  color: var(--mon-blue);
-  width: 40px;
-  text-align: right;
+  line-height: 1.35;
+  text-align: center;
+  padding: 20px 22px;
 }
 
 /* ── NEWS / UPDATES ── */
@@ -414,54 +295,6 @@ main { max-width: 1200px; margin: 0 auto; padding: 56px 24px 80px; }
 }
 .update-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* ── CTA BANNER ── */
-.cta-banner {
-  background: linear-gradient(135deg, #08080E 0%, #1A1A2E 100%);
-  border-radius: 20px;
-  padding: 48px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-bottom: 64px;
-  position: relative;
-  overflow: hidden;
-}
-.cta-banner::before {
-  content: '';
-  position: absolute;
-  right: -50px; top: -50px;
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(255,184,0,0.12) 0%, transparent 70%);
-}
-.cta-banner h3 {
-  font-family: 'Innerspace', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-.cta-banner p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.6; }
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--mon-yellow);
-  color: var(--mon-black);
-  font-family: 'Innerspace', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 14px 28px;
-  border-radius: 12px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.2s;
-  flex-shrink: 0;
-}
-.cta-btn:hover { background: #FFC933; transform: translateY(-2px); }
-
 /* ── FOOTER ── */
 footer {
   background: var(--mon-black);
@@ -491,9 +324,6 @@ footer {
   main { padding: 40px 16px 60px; }
   header { padding: 10px 16px; }
   .header-nav { display: none; }
-  .progress-item-name { width: 140px; }
-  .cta-banner { padding: 32px 24px; }
-  .progress-section { padding: 24px; }
 }
 </style>
 </head>
@@ -511,8 +341,8 @@ footer {
     <nav class="header-nav">
       <a href="index.html">Головна</a>
       <a href="#">Нормотворення</a>
-      <a href="#pillar-decentralization">Децентралізація управління</a>
-      <a href="#pillar-quality">Якість освіти</a>
+      <a href="#">Зміст освіти</a>
+      <a href="#">Середовище</a>
       <a href="naglyadova-rada.html">Публічно-приватне партнерство</a>
     </nav>
     <div class="header-partners">
@@ -523,86 +353,34 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <h2>Нова модель <span>професійної освіти</span> України</h2>
-  <p>Системна трансформація закладів профосвіти:<br>від управління і фінансування до змісту освіти та партнерства з бізнесом</p>
+  <h2>Нова модель професійної освіти України</h2>
+  <p>Системна трансформація закладів професійної освіти</p>
 </section>
 
 <!-- MAIN -->
 <main>
 
   <!-- МОДУЛІ -->
-  <h2 class="section-title">Напрямки реформи</h2>
-  <p class="section-sub">Кожен напрямок має власну дорожню карту, нормативну базу, шаблони документів і моніторинг виконання</p>
-
   <div class="modules-grid">
 
     <!-- 1. Децентралізація управління та фінансування -->
-    <a href="#" class="module-card mod-1" id="pillar-decentralization">
-      <div class="module-card-top">
-        <div class="module-number">01</div>
-        <div class="module-icon">🗺️</div>
-        <h3>Децентралізація управління та фінансування</h3>
-        <p>Поетапна передача повноважень з управління закладами професійної освіти та їх фінансування на обласний рівень; розширення автономії закладів; оптимізація мережі ЗПО; умови для здобуття кваліфікацій упродовж життя з урахуванням інклюзивного навчання; формування регіонального замовлення на основі аналізу ринку праці.</p>
-      </div>
-      <div class="module-card-bottom">
-        <span class="module-status status-soon">⏳ Незабаром</span>
-        <div class="module-arrow">→</div>
-      </div>
+    <a href="#" class="module-card mod-1">
+      <img class="module-photo" src="assets/images/pillar-decentralization.svg" alt="Децентралізація управління та фінансування">
+      <h3>Децентралізація управління та фінансування</h3>
     </a>
 
     <!-- 2. Забезпечення якості професійної освіти -->
-    <a href="#" class="module-card mod-2" id="pillar-quality">
-      <div class="module-card-top">
-        <div class="module-number">02</div>
-        <div class="module-icon">🎯</div>
-        <h3>Забезпечення якості професійної освіти</h3>
-        <p>Формування змісту освіти на компетентнісній основі; внутрішня та зовнішня системи забезпечення якості освіти; модернізація освітнього середовища; удосконалення підготовки педагогічних працівників із залученням фахівців виробництва; мотиваційні механізми для педагогів.</p>
-      </div>
-      <div class="module-card-bottom">
-        <span class="module-status status-soon">⏳ Незабаром</span>
-        <div class="module-arrow">→</div>
-      </div>
+    <a href="#" class="module-card mod-2">
+      <img class="module-photo" src="assets/images/pillar-quality.svg" alt="Забезпечення якості професійної освіти">
+      <h3>Забезпечення якості професійної освіти</h3>
     </a>
 
     <!-- 3. Публічно-приватне партнерство — АКТИВНИЙ (Наглядова рада) -->
     <a href="naglyadova-rada.html" class="module-card mod-3 active-module">
-      <div class="module-card-top">
-        <div class="module-number">03</div>
-        <div class="module-icon">🤝</div>
-        <h3>Публічно-приватне партнерство</h3>
-        <p>Наглядові ради та єдина система професійних кваліфікацій; стимулювання роботодавців до участі в освітньому процесі; розвиток дуальної освіти; визнання неформальної й інформальної освіти; популяризація професійної освіти та планування кар'єри.</p>
-      </div>
-      <div class="module-card-bottom">
-        <span class="module-status status-active">🟢 Доступно</span>
-        <div class="module-arrow" style="background:#2B48FF;color:white;">→</div>
-      </div>
+      <img class="module-photo" src="assets/images/pillar-ppp.svg" alt="Публічно-приватне партнерство">
+      <h3>Публічно-приватне партнерство</h3>
     </a>
 
-  </div>
-
-  <!-- ПРОГРЕС РЕФОРМИ -->
-  <h2 class="section-title">Загальний прогрес реформи</h2>
-  <p class="section-sub">Стан виконання ключових напрямків станом на червень 2026</p>
-
-  <div class="progress-section">
-    <h3>📊 Виконання за напрямками</h3>
-    <div class="progress-list">
-      <div class="progress-item">
-        <div class="progress-item-name">Децентралізація управління та фінансування</div>
-        <div class="progress-bar-wrap"><div class="progress-bar-fill yellow" style="width:25%;"></div></div>
-        <div class="progress-pct" style="color:#B7770D;">25%</div>
-      </div>
-      <div class="progress-item">
-        <div class="progress-item-name">Забезпечення якості освіти</div>
-        <div class="progress-bar-wrap"><div class="progress-bar-fill yellow" style="width:30%;"></div></div>
-        <div class="progress-pct" style="color:#B7770D;">30%</div>
-      </div>
-      <div class="progress-item">
-        <div class="progress-item-name">Публічно-приватне партнерство</div>
-        <div class="progress-bar-wrap"><div class="progress-bar-fill green" style="width:78%;"></div></div>
-        <div class="progress-pct" style="color:#1E8449;">78%</div>
-      </div>
-    </div>
   </div>
 
   <!-- ОНОВЛЕННЯ -->
@@ -630,16 +408,6 @@ footer {
     </div>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-banner">
-    <div>
-      <h3>Починаємо з наглядових рад</h3>
-      <p>Перший модуль реформи вже доступний — алгоритм формування наглядової ради, всі документи та моніторинг по областях і закладах.</p>
-    </div>
-    <a href="naglyadova-rada.html" class="cta-btn">
-      Відкрити модуль 🏛️
-    </a>
-  </div>
 
 </main>
 
@@ -651,16 +419,5 @@ footer {
   <div class="footer-text">© 2026 Команда підтримки реформ МОН України</div>
 </footer>
 
-<script>
-// Анімація прогрес-барів при завантаженні
-window.addEventListener('load', function() {
-  const bars = document.querySelectorAll('.progress-bar-fill');
-  bars.forEach(bar => {
-    const w = bar.style.width;
-    bar.style.width = '0%';
-    setTimeout(() => { bar.style.width = w; }, 300);
-  });
-});
-</script>
 </body>
 </html>
