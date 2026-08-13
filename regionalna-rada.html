@@ -49,7 +49,7 @@ nav::-webkit-scrollbar{display:none;}
 .info-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);}
 .card-icon{width:46px;height:46px;border-radius:12px;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px;}
 .info-card h3{font-family:'Innerspace',sans-serif;font-weight:700;font-size:13px;font-weight:600;margin-bottom:9px;color:var(--navy);}
-.info-card p{font-size:14px;color:#4A5568;line-height:1.6;}
+.info-card p{font-size:16px;color:#3D4759;line-height:1.75;}
 .table-card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;margin-bottom:22px;}
 .table-card-header{background:#FFFFFF;border-bottom:3px solid #2B48FF;border-bottom:3px solid #2B48FF;color:white;padding:16px 22px;font-family:'Innerspace',sans-serif;font-weight:700;font-size:13px;font-weight:600;display:flex;align-items:center;gap:10px;}
 table{width:100%;border-collapse:collapse;}
@@ -78,7 +78,7 @@ tr:hover td{background:#F7FAFF;}
 .stage-body{display:none;border-top:1px solid var(--border);padding:22px;}
 .stage-card.open .stage-body{display:block;}
 .steps-list{list-style:none;margin-bottom:18px;}
-.steps-list li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px;line-height:1.5;}
+.steps-list li{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--border);font-size:16px;line-height:1.6;}
 .steps-list li:last-child{border-bottom:none;}
 .step-dot{width:8px;height:8px;border-radius:50%;background:var(--sky);flex-shrink:0;margin-top:6px;}
 .step-deadline{margin-left:auto;font-size:11px;color:var(--accent);font-weight:600;white-space:nowrap;padding:2px 8px;background:rgba(245,166,35,0.1);border-radius:8px;}
@@ -134,7 +134,7 @@ tr:hover td{background:#F7FAFF;}
 .compare-table td:last-child{background:#F0FFF4;}
 .compare-table tr:last-child td{border-bottom:none;}
 .params-table td:first-child{font-weight:600;color:var(--navy);background:var(--light);width:40%;}
-.section-title{font-family:'Innerspace',sans-serif;font-weight:700;font-size:19px;font-weight:700;color:var(--navy);margin-bottom:22px;display:flex;align-items:center;gap:12px;}
+.section-title{font-family:'Innerspace',sans-serif;font-weight:700;font-size:21px;color:var(--navy);margin-top:36px;margin-bottom:18px;display:flex;align-items:center;gap:12px;}
 .section-title::after{content:'';flex:1;height:2px;background:linear-gradient(90deg,var(--border),transparent);}
 .alert-box{border-radius:14px;padding:16px 22px;display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;}
 .alert-box.warning{background:linear-gradient(135deg,#FFF8E7,#FFFBF0);border:1px solid var(--accent);}
@@ -240,14 +240,12 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
   <h2 class="section-title">🏛️ Правовий статус і мета</h2>
   <div style="margin-bottom:16px;">
     <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 1</div>
       <p>Регіональна рада професійної освіти (далі - регіональна рада) є консультативно-дорадчим органом, що утворюється при Раді міністрів Автономної Республіки Крим, обласних, Київській та Севастопольській міських держадміністраціях (далі - місцеві органи виконавчої влади) для участі у формуванні та виконанні завдань державної регіональної політики у частині розвитку професійної освіти.</p>
     </div>
   </div>
   <h2 class="section-title">📖 Правові засади та принципи діяльності</h2>
   <div style="margin-bottom:16px;">
     <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 2</div>
       <p>Регіональна рада у своїй діяльності керується Конституцією та законами України, указами Президента України та постановами Верховної Ради України, прийнятими відповідно до Конституції та законів України, актами Кабінету Міністрів України, іншими актами законодавства.</p>
       <p>Діяльність регіональної ради провадиться на принципах відкритості, прозорості, партнерства, обґрунтованості рішень, рівного представництва сторін, орієнтації на потреби регіонального ринку праці та сталого економічного розвитку.</p>
     </div>
@@ -255,14 +253,12 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
   <h2 class="section-title">📋 Порядок утворення</h2>
   <div style="margin-bottom:16px;">
     <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 3</div>
       <p>Регіональна рада утворюється та діє на підставі положення, яке розробляється на основі цього Примірного положення. Положення про регіональну раду та зміни до нього затверджуються місцевим органом виконавчої влади, при якому утворюється регіональна рада.</p>
     </div>
   </div>
   <h2 class="section-title">🎯 Основні завдання регіональної ради</h2>
   <div style="margin-bottom:16px;">
     <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 4</div>
       <p>Основними завданнями регіональної ради є:</p>
       <ul class="steps-list" style="margin-top:10px;">
         <li><div class="step-dot"></div><span>сприяння формуванню та виконанню завдань державної регіональної політики у частині розвитку професійної освіти</span></li>
@@ -281,7 +277,6 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
   <h2 class="section-title">⚖️ Права регіональної ради</h2>
   <div style="margin-bottom:16px;">
     <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 5</div>
       <p>Регіональна рада має право:</p>
       <ul class="steps-list" style="margin-top:10px;">
         <li><div class="step-dot"></div><span>отримувати в установленому порядку від органів виконавчої влади, органів місцевого самоврядування, юридичних осіб незалежно від організаційно-правової форми інформацію, необхідну для виконання покладених на регіональну раду завдань</span></li>
@@ -294,7 +289,6 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
   <h2 class="section-title">👥 Склад регіональної ради</h2>
   <div style="margin-bottom:16px;">
     <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 6</div>
       <p>До складу регіональної ради входять на паритетних засадах представники:</p>
       <ul class="steps-list" style="margin-top:10px;">
         <li><div class="step-dot"></div><span>місцевого органу виконавчої влади, при якому утворюється регіональна рада, та органу місцевого самоврядування (за згодою)</span></li>
@@ -302,178 +296,9 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
         <li><div class="step-dot"></div><span>закладів професійної освіти</span></li>
       </ul>
       <p style="margin-top:14px;">Кількість членів регіональної ради визначається місцевим органом виконавчої влади, при якому утворюється регіональна рада, і не може перевищувати 15 осіб.<br>Члени регіональної ради виконують свої обов&rsquo;язки на громадських засадах.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 7</div>
-      <p>Рішення про порядок формування складу регіональної ради приймається місцевим органом виконавчої влади, при якому вона утворюється.</p>
-      <p>Персональний склад регіональної ради затверджується розпорядженням керівника місцевого органу виконавчої влади, при якому вона утворюється, строком на три роки.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 8</div>
-      <p>Зміни до складу регіональної ради вносяться місцевим органом виконавчої влади, при якому утворюється регіональна рада, за поданням голови регіональної ради.</p>
-      <p>Дострокове припинення повноважень члена регіональної ради є підставою для внесення змін до складу регіональної ради.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 9</div>
-      <p>Одна особа може бути повторно призначена членом регіональної ради не більш як на два строки повноважень підряд.</p>
-    </div>
-  </div>
-  <h2 class="section-title">🧑‍💼 Голова, заступники та секретар</h2>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 10</div>
-      <p>Регіональну раду очолює голова, який призначається керівником місцевого органу виконавчої влади, при якому утворюється регіональна рада.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 11</div>
-      <p>Голова регіональної ради:</p>
-      <ul class="steps-list" style="margin-top:10px;">
-        <li><div class="step-dot"></div><span>організовує діяльність регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>ініціює проведення засідань регіональної ради, керує їх підготовкою</span></li>
-        <li><div class="step-dot"></div><span>головує на засіданнях регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>розподіляє обов&rsquo;язки між заступниками, секретарем та іншими членами регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>підписує документи регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>представляє регіональну раду у відносинах з органами державної влади, органами місцевого самоврядування, юридичними особами незалежно від організаційно-правової форми, медіа</span></li>
-        <li><div class="step-dot"></div><span>звітує про діяльність регіональної ради перед її членами та керівником місцевого органу виконавчої влади, при якому утворюється регіональна рада</span></li>
-        <li><div class="step-dot"></div><span>здійснює інші повноваження, що передбачені цим Примірним положенням</span></li>
-      </ul>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 12</div>
-      <p>Голова регіональної ради може мати заступників, які обираються з числа членів регіональної ради на її засіданні.</p>
-      <p>Заступник голови регіональної ради здійснює заходи щодо виконання основних завдань регіональної ради, визначених цим Примірним положенням, виконує обов&rsquo;язки голови регіональної ради у разі його відсутності.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 13</div>
-      <p>Секретар регіональної ради обирається з числа членів регіональної ради на її засіданні. Секретар регіональної ради відповідає за організаційне забезпечення та інформаційну підтримку діяльності регіональної ради, а саме:</p>
-      <ul class="steps-list" style="margin-top:10px;">
-        <li><div class="step-dot"></div><span>інформує членів регіональної ради про місце і час проведення засідань</span></li>
-        <li><div class="step-dot"></div><span>забезпечує ведення та збереження документації</span></li>
-        <li><div class="step-dot"></div><span>веде протоколи засідань регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>готує та розсилає за належністю документи регіональної ради</span></li>
-      </ul>
-    </div>
-  </div>
-  <h2 class="section-title">🙋 Права членів регіональної ради</h2>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 14</div>
-      <p>Члени регіональної ради мають право:</p>
-      <ul class="steps-list" style="margin-top:10px;">
-        <li><div class="step-dot"></div><span>ознайомлюватися з матеріалами і документами до засідання регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>ініціювати розгляд питань на чергових та позачергових засіданнях регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>брати участь у голосуванні регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>вносити зміни до проектів рішень регіональної ради</span></li>
-        <li><div class="step-dot"></div><span>брати участь у роботі постійних або тимчасових робочих груп, комісій</span></li>
-        <li><div class="step-dot"></div><span>достроково припинити свої повноваження, звернувшись з відповідною заявою до голови регіональної ради</span></li>
-      </ul>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 15</div>
-      <p>Повноваження члена регіональної ради припиняються достроково:</p>
-      <ul class="steps-list" style="margin-top:10px;">
-        <li><div class="step-dot"></div><span>у разі відсутності члена регіональної ради на її засіданнях без поважних причин двічі підряд</span></li>
-        <li><div class="step-dot"></div><span>у разі, коли член регіональної ради письмово повідомив про своє рішення вийти з її складу</span></li>
-        <li><div class="step-dot"></div><span>у разі його відкликання суб&rsquo;єктом, яким його було делеговано до складу регіональної ради</span></li>
-      </ul>
-      <p style="margin-top:14px;">Протягом п&rsquo;яти робочих днів після дострокового припинення повноважень члена регіональної ради голова регіональної ради інформує про це суб&rsquo;єкта, який делегував цього представника до її складу відповідно до пункту 6 цього Примірного положення, для подання таким суб&rsquo;єктом іншого представника до складу регіональної ради.</p>
-    </div>
-  </div>
-  <h2 class="section-title">🗓️ Організація роботи регіональної ради</h2>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 16</div>
-      <p>Регіональна рада провадить свою діяльність відповідно до затверджених нею планів роботи.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 17</div>
-      <p>Основною формою роботи регіональної ради є засідання. Головуючим на засіданні регіональної ради є голова регіональної ради, а в разі його відсутності - один із його заступників.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 18</div>
-      <p>Час та місце проведення засідання визначає голова регіональної ради (у разі його відсутності - заступник голови регіональної ради).</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 19</div>
-      <p>Секретар регіональної ради повідомляє всім членам регіональної ради про проведення засідання не пізніше ніж за десять календарних днів до його проведення.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 20</div>
-      <p>Засідання регіональної ради вважається правоможним, якщо на ньому присутні більше половини її членів. У разі потреби засідання регіональної ради може проводитися з використанням технічних засобів електронних комунікацій за умови, що кожен член регіональної ради, який бере участь у такому засіданні, може бачити і чути та спілкуватися з усіма іншими учасниками засідання.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 21</div>
-      <p>За запрошенням голови регіональної ради у засіданнях регіональної ради можуть брати участь інші особи.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 22</div>
-      <p>Засідання регіональної ради можуть бути чергові (проводяться не рідше ніж один раз на квартал) та позачергові (скликаються головою регіональної ради на вимогу не менш як однієї третини від загальної кількості членів регіональної ради).</p>
-    </div>
-  </div>
-  <h2 class="section-title">🗳️ Ухвалення рішень</h2>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 23</div>
-      <p>На засіданнях регіональної ради розглядаються пропозиції з питань, що належать до її компетенції. Пропозиції регіональної ради вважаються схваленими, якщо за них проголосувала більшість членів регіональної ради від її складу.</p>
-      <p>У разі рівного розподілу голосів вирішальним є голос головуючого на засіданні.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 24</div>
-      <p>Рішення з робочих питань, що не стосуються персонального складу регіональної ради, приймається шляхом відкритого голосування.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 25</div>
-      <p>Рішення регіональної ради оформляються у формі протоколу засідання, який підписують головуючий на її засіданні та секретар регіональної ради протягом п&rsquo;яти робочих днів після проведення засідання.</p>
-      <p>Член регіональної ради, який не підтримує пропозиції, ухвалені рішенням регіональної ради, може викласти у письмовій формі свою окрему думку, що додається до протоколу засідання і є його невід&rsquo;ємною частиною.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 26</div>
-      <p>Рішення регіональної ради, прийняті у межах її компетенції, мають рекомендаційний характер і розглядаються місцевим органом виконавчої влади, при якому утворюється регіональна рада, та відповідним органом місцевого самоврядування в межах їх повноважень.</p>
-    </div>
-  </div>
-  <h2 class="section-title">🔎 Забезпечення діяльності та прозорість</h2>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 27</div>
-      <p>Місцевий орган виконавчої влади, при якому утворюється регіональна рада, створює умови для діяльності регіональної ради та проведення її засідань, забезпечує приміщенням, технічними засобами електронних комунікацій, забезпечує зберігання документів регіональної ради, рішень та протоколів засідань тощо.</p>
-    </div>
-  </div>
-  <div style="margin-bottom:16px;">
-    <div class="info-card">
-      <div class="art-num" style="margin-bottom:8px;display:inline-block;">п. 28</div>
-      <p>Регіональна рада в обов&rsquo;язковому порядку інформує місцевий орган виконавчої влади, при якому вона утворюється, та громадськість про свою роботу шляхом розміщення на офіційному веб-сайті такого органу та оприлюднення в інший прийнятний спосіб регламенту, плану роботи, прийнятих рішень та інформації про їх виконання, протоколів засідань, щорічних звітів про діяльність тощо, а також інформації про керівний склад, склад постійних або тимчасових робочих груп, комісій.</p>
+      <p style="margin-top:14px;">Рішення про порядок формування складу регіональної ради приймається місцевим органом виконавчої влади, при якому вона утворюється. Персональний склад регіональної ради затверджується розпорядженням керівника місцевого органу виконавчої влади, при якому вона утворюється, строком на три роки.</p>
+      <p style="margin-top:14px;">Зміни до складу регіональної ради вносяться місцевим органом виконавчої влади, при якому утворюється регіональна рада, за поданням голови регіональної ради. Дострокове припинення повноважень члена регіональної ради є підставою для внесення змін до складу регіональної ради.</p>
+      <p style="margin-top:14px;">Одна особа може бути повторно призначена членом регіональної ради не більш як на два строки повноважень підряд.</p>
     </div>
   </div>
 </div>
