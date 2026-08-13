@@ -323,12 +323,18 @@ footer {
 }
 
 /* ── RESPONSIVE ── */
+.mobile-nav-toggle { display: none; background: none; border: none; font-size: 22px; line-height: 1; color: var(--mon-blue); cursor: pointer; padding: 4px 6px; }
 @media (max-width: 768px) {
   .hero h2 { font-size: 28px; white-space: normal; }
   .hero { padding: 48px 20px 56px; }
   main { padding: 40px 16px 60px; }
-  header { padding: 10px 16px; }
-  .header-nav { display: none; }
+  header { padding: 10px 16px; position: relative; }
+  .mobile-nav-toggle { display: block; }
+  .header-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; gap: 0; padding: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.14); border-top: 1px solid var(--border); z-index: 400; }
+  .header-nav.mobile-open { display: flex; }
+  .header-nav a { padding: 12px 14px; border-radius: 8px; }
+  .nav-dropdown-menu { display: block; position: static; box-shadow: none; border: none; padding: 0 0 4px 16px; min-width: 0; }
+  .nav-dropdown-menu a { font-size: 13px; color: var(--muted); padding: 9px 14px; }
   .header-partners img { height: 26px; max-width: 150px; }
   .header-logo-text h1 { font-size: 13px; }
 }
@@ -361,6 +367,7 @@ footer {
     <div class="header-partners">
       <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
     </div>
+    <button class="mobile-nav-toggle" aria-label="Відкрити меню">☰</button>
   </div>
 </header>
 
@@ -432,5 +439,6 @@ footer {
   <div class="footer-text">© 2026 Команда підтримки реформ МОН України</div>
 </footer>
 
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
