@@ -176,6 +176,12 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
 .header-nav{display:flex;gap:4px;}
 .header-nav a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all 0.2s;white-space:nowrap;}
 .header-nav a:hover{background:var(--light);color:var(--blue);}
+.nav-dropdown{position:relative;}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-lg);padding:6px;min-width:200px;z-index:300;}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block;}
+.nav-dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-size:13px;white-space:nowrap;}
+.nav-dropdown-menu a:hover{background:var(--light);color:var(--blue);}
+.nav-dropdown-menu a.active{color:var(--blue);font-weight:700;}
 .header-nav a.active{color:var(--blue);font-weight:700;}
 .header-partners img{height:36px;object-fit:contain;}
 
@@ -185,6 +191,7 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
 .site-subnav a{color:var(--navy);text-decoration:none;font-family:'Innerspace',sans-serif;font-size:13px;font-weight:400;padding:12px 16px;border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;}
 .site-subnav a:hover{color:var(--blue);}
 .site-subnav a.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:700;}
+.site-subnav .crumb-sep{padding:12px 2px;color:var(--muted);font-size:13px;user-select:none;}
 
 @media(max-width:860px){
   .header-nav{display:none;}
@@ -206,7 +213,13 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
       <a href="#">Нормотворення</a>
       <a href="#">Зміст освіти</a>
       <a href="#">Середовище</a>
-      <a href="naglyadova-rada.html" class="active">Публічно-приватне партнерство</a>
+      <div class="nav-dropdown">
+        <a href="naglyadova-rada.html" class="active">Публічно-приватне партнерство</a>
+        <div class="nav-dropdown-menu">
+          <a href="naglyadova-rada.html" class="active">Наглядова рада</a>
+          <a href="regionalna-rada.html">Регіональна рада</a>
+        </div>
+      </div>
     </nav>
     <div class="header-partners">
       <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
@@ -216,8 +229,8 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
 <div class="site-subheader">
   <nav class="site-subnav">
     <a href="index.html">Головна</a>
-    <a href="naglyadova-rada.html" class="active">Наглядова рада</a>
-    <a href="regionalna-rada.html">Регіональна рада</a>
+    <span class="crumb-sep">›</span>
+    <a href="#" class="active" onclick="return false;">Наглядова рада</a>
   </nav>
 </div>
 </div>
