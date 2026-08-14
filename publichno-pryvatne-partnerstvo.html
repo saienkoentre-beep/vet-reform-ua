@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Публічно-приватне партнерство · Реформа професійної освіти</title>
+<style>
+@font-face {
+  font-family: 'Innerspace';
+  src: url('assets/fonts/Innerspace-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Innerspace';
+  src: url('assets/fonts/Innerspace-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+:root {
+  --blue: #2B48FF;
+  --accent: #FFB800;
+  --navy: #08080E;
+  --light: #F5F5F7;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  --white: #FFFFFF;
+  --shadow: 0 4px 24px rgba(8,8,14,0.08);
+  --shadow-lg: 0 12px 48px rgba(8,8,14,0.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Innerspace',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--light);color:var(--navy);min-height:100vh;}
+
+/* ── SITE-WIDE HEADER ── */
+.site-header-group{position:sticky;top:0;z-index:200;}
+header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 8px rgba(43,72,255,0.08);}
+.header-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.header-logo-icon{width:42px;height:42px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.header-logo-text h1{font-family:'Innerspace',sans-serif;font-weight:700;font-size:14px;color:var(--blue);line-height:1.2;}
+.header-right{display:flex;align-items:center;gap:20px;}
+.header-nav{display:flex;gap:4px;}
+.header-nav a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all 0.2s;white-space:nowrap;}
+.header-nav a:hover{background:var(--light);color:var(--blue);}
+.nav-dropdown{position:relative;}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-lg);padding:6px;min-width:200px;z-index:300;}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block;}
+.nav-dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-size:13px;white-space:nowrap;}
+.nav-dropdown-menu a:hover{background:var(--light);color:var(--blue);}
+.nav-dropdown-menu a.active{color:var(--blue);font-weight:700;}
+.header-nav a.active{color:var(--blue);font-weight:700;}
+.header-partners img{height:36px;object-fit:contain;}
+
+/* ── SECONDARY BREADCRUMB NAV ── */
+.site-subheader{background:#fff;border-bottom:1px solid var(--border);}
+.site-subnav{max-width:1200px;margin:0 auto;display:flex;padding:0 32px;overflow-x:auto;}
+.site-subnav a{color:var(--navy);text-decoration:none;font-family:'Innerspace',sans-serif;font-size:13px;font-weight:400;padding:12px 16px;border-bottom:3px solid transparent;white-space:nowrap;transition:all .15s;}
+.site-subnav a:hover{color:var(--blue);}
+.site-subnav a.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:700;}
+.site-subnav .crumb-sep{padding:12px 2px;color:var(--muted);font-size:13px;user-select:none;}
+
+.mobile-nav-toggle{display:none;background:none;border:none;font-size:22px;line-height:1;color:var(--blue);cursor:pointer;padding:4px 6px;}
+@media(max-width:860px){
+  header{position:relative;}
+  .mobile-nav-toggle{display:block;}
+  .header-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px;box-shadow:0 8px 24px rgba(0,0,0,0.14);border-top:1px solid var(--border);z-index:400;}
+  .header-nav.mobile-open{display:flex;}
+  .header-nav a{padding:12px 14px;border-radius:8px;}
+  .nav-dropdown-menu{display:block;position:static;box-shadow:none;border:none;padding:0 0 4px 16px;min-width:0;}
+  .nav-dropdown-menu a{font-size:13px;color:var(--muted);padding:9px 14px;}
+  .header-partners img{height:26px;max-width:150px;}
+  .header-logo-text h1{font-size:13px;}
+}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,#1A3ACC 0%,#2B48FF 60%,#4D6AFF 100%);padding:72px 32px 80px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,184,0,0.15) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%);pointer-events:none;}
+.hero h2{font-family:'Innerspace',sans-serif;font-weight:700;font-size:clamp(1.75rem, 1.2rem + 2.5vw, 2.75rem);color:var(--accent);line-height:1.15;margin-bottom:18px;max-width:900px;margin-left:auto;margin-right:auto;position:relative;}
+.hero p{font-size:17px;color:#fff;max-width:700px;margin:0 auto;line-height:1.7;position:relative;}
+
+/* ── MAIN / CARDS ── */
+main{max-width:1200px;margin:0 auto;padding:56px 24px 80px;}
+.modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
+.module-card{background:#fff;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;text-decoration:none;color:inherit;position:relative;}
+.module-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--blue);}
+.module-photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--light);}
+.module-card h3{font-family:'Innerspace',sans-serif;font-weight:700;font-size:17px;color:var(--navy);line-height:1.35;text-align:center;padding:20px 22px;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.footer-logo img{height:36px;object-fit:contain;background:white;padding:4px 8px;border-radius:6px;}
+.footer-text{font-size:13px;color:rgba(255,255,255,0.5);}
+
+@media (max-width:768px){
+  .hero{padding:48px 20px 56px;}
+  main{padding:40px 16px 60px;}
+}
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YE72T1FFV"></script>
+</head>
+<body>
+
+<div class="site-header-group">
+<header>
+  <a class="header-logo" href="index.html">
+    <div class="header-logo-icon">🎓</div>
+    <div class="header-logo-text"><h1>Реформа професійної освіти</h1></div>
+  </a>
+  <div class="header-right">
+    <nav class="header-nav">
+      <a href="index.html">Головна</a>
+      <a href="#">Нормотворення</a>
+      <a href="#">Зміст та якість освіти</a>
+      <div class="nav-dropdown">
+        <a href="publichno-pryvatne-partnerstvo.html" class="active">Публічно-приватне партнерство</a>
+        <div class="nav-dropdown-menu">
+          <a href="naglyadova-rada.html">Наглядова рада</a>
+          <a href="regionalna-rada.html">Регіональна рада</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-partners">
+      <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
+    </div>
+    <button class="mobile-nav-toggle" aria-label="Відкрити меню">☰</button>
+  </div>
+</header>
+<div class="site-subheader">
+  <nav class="site-subnav">
+    <a href="index.html">Головна</a>
+    <span class="crumb-sep">›</span>
+    <a href="#" class="active" onclick="return false;">Публічно-приватне партнерство</a>
+  </nav>
+</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Публічно-приватне партнерство</h2>
+  <p>Напрямок реформи, що об'єднує наглядові та регіональні ради закладів професійної освіти — оберіть розділ нижче.</p>
+</section>
+
+<!-- MAIN -->
+<main>
+  <div class="modules-grid">
+
+    <a href="naglyadova-rada.html" class="module-card">
+      <img class="module-photo" src="assets/images/pillar-naglyadova.svg" alt="Наглядова рада">
+      <h3>Наглядова рада</h3>
+    </a>
+
+    <a href="regionalna-rada.html" class="module-card">
+      <img class="module-photo" src="assets/images/pillar-regionalna.svg" alt="Регіональна рада">
+      <h3>Регіональна рада</h3>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo">
+    <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
+  </div>
+  <div class="footer-text">© 2026 Команда підтримки реформ МОН України</div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

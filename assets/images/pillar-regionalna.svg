@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="gRegio" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3ACC"/>
+      <stop offset="100%" stop-color="#4D6AFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#gRegio)"/>
+  <circle cx="700" cy="500" r="200" fill="#ffffff" opacity="0.05"/>
+  <circle cx="100" cy="90" r="150" fill="#FFB800" opacity="0.10"/>
+  <g fill="none" stroke="#ffffff" stroke-width="4" opacity="0.5">
+    <polygon points="270,220 400,150 530,220 530,340 400,410 270,340"/>
+    <polygon points="400,150 530,220 660,150 660,270 530,340"/>
+    <polygon points="140,220 270,150 400,220 400,340 270,410 140,340"/>
+  </g>
+  <path d="M400 230 C 452 230 490 265 490 312 C 490 365 400 440 400 440 C 400 440 310 365 310 312 C 310 265 348 230 400 230 Z" fill="#FFB800"/>
+  <circle cx="400" cy="308" r="26" fill="#08080E"/>
+</svg>
