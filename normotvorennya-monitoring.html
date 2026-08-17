@@ -261,9 +261,9 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
       <table>
         <thead><tr>
           <th>Назва НПА</th>
+          <th>Статус</th>
           <th>Акт</th>
           <th>Джерело</th>
-          <th>Статус</th>
         </tr></thead>
         <tbody id="tblBody"></tbody>
       </table>
@@ -353,9 +353,9 @@ function renderTable() {
     }
     return `<tr>
       <td class="td-name">${nameCell}</td>
+      <td><span class="sbadge ${badgeClass}">${escapeHtml(d.status)}</span>${note}</td>
       <td class="td-act">${actCell}</td>
       <td><span class="srcbadge ${srcClass}">${escapeHtml(d.source)}</span></td>
-      <td><span class="sbadge ${badgeClass}">${escapeHtml(d.status)}</span>${note}</td>
     </tr>`;
   }).join('');
 }
