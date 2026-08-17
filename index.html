@@ -307,6 +307,13 @@ main { max-width: 1200px; margin: 0 auto; padding: 56px 24px 80px; }
   display: flex;
   margin-bottom: 14px;
 }
+.snapshot-subbar-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--mon-black);
+  margin-bottom: 6px;
+}
+.snapshot-subbar { margin-bottom: 4px; }
 .snapshot-bar > div { height: 100%; }
 .snapshot-legend {
   display: flex;
@@ -498,8 +505,8 @@ footer {
   </div>
 
   <!-- СТАН РЕФОРМИ (знімок даних з відповідних сторінок моніторингу) -->
-  <h2 class="section-title">Стан реформи</h2>
-  <p class="section-sub">Прогрес за ключовими напрямками впровадження</p>
+  <h2 class="section-title">Прогрес за ключовими напрямками</h2>
+  <p class="section-sub">Актуальні показники за результатами моніторингу</p>
 
   <div class="snapshot-grid">
 
@@ -508,18 +515,23 @@ footer {
         <div class="snapshot-icon">📋</div>
         <div>
           <div class="snapshot-title">Стан затвердження нормативних актів</div>
-          <div class="snapshot-sub">55 актів — постанови КМУ та накази МОН</div>
         </div>
       </div>
-      <div class="snapshot-bar">
-        <div style="width:45.5%;background:#27AE60"></div>
-        <div style="width:30.9%;background:var(--mon-yellow)"></div>
-        <div style="width:23.6%;background:var(--border)"></div>
+      <div class="snapshot-subbar">
+        <div class="snapshot-subbar-title">Нормативно-правові акти КМУ</div>
+        <div class="snapshot-bar">
+          <div style="width:59.3%;background:#27AE60"></div>
+          <div style="width:25.9%;background:var(--mon-yellow)"></div>
+          <div style="width:14.8%;background:var(--border)"></div>
+        </div>
       </div>
-      <div class="snapshot-legend">
-        <div class="snapshot-leg-item"><div class="snapshot-leg-dot" style="background:#27AE60"></div><span class="snapshot-leg-num">25</span>&nbsp;прийнято</div>
-        <div class="snapshot-leg-item"><div class="snapshot-leg-dot" style="background:var(--mon-yellow)"></div><span class="snapshot-leg-num">17</span>&nbsp;на погодженні</div>
-        <div class="snapshot-leg-item"><div class="snapshot-leg-dot" style="background:var(--border)"></div><span class="snapshot-leg-num">13</span>&nbsp;у розробці</div>
+      <div class="snapshot-subbar">
+        <div class="snapshot-subbar-title">Накази МОН</div>
+        <div class="snapshot-bar">
+          <div style="width:32.1%;background:#27AE60"></div>
+          <div style="width:35.7%;background:var(--mon-yellow)"></div>
+          <div style="width:32.1%;background:var(--border)"></div>
+        </div>
       </div>
       <a href="normotvorennya-monitoring.html" class="snapshot-link">Детальніше →</a>
     </div>
