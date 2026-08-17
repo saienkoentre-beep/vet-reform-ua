@@ -80,13 +80,19 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
 .hero p{font-size:16px;color:#fff;max-width:700px;margin:0 auto;line-height:1.6;position:relative;}
 
 /* ── MAIN ── */
-main{max-width:1100px;margin:0 auto;padding:32px 20px 80px;}
+.layout-grid{max-width:1350px;margin:0 auto;padding:32px 20px 80px;display:flex;align-items:flex-start;gap:24px;}
+.layout-grid > main{flex:1;min-width:0;max-width:1100px;padding:0;}
 
-/* ── SECTION TABS (Перелік / Моніторинг) ── */
-.section-tabs{display:flex;gap:8px;background:#fff;border-radius:14px;padding:6px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:22px;overflow-x:auto;}
-.section-tab{background:none;border:none;padding:10px 18px;font-family:'Innerspace',sans-serif;font-size:13px;font-weight:400;color:var(--muted);cursor:pointer;border-radius:10px;white-space:nowrap;transition:all .2s;text-decoration:none;display:inline-block;}
-.section-tab.active{background:var(--blue);color:#fff;font-weight:700;}
-.section-tab:hover:not(.active){background:var(--light);color:var(--navy);}
+/* ── PAGE TOC (Нормативні документи / Моніторинг затвердження) ── */
+.page-toc{width:230px;flex-shrink:0;position:sticky;top:130px;background:#fff;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow);padding:10px;display:flex;flex-direction:column;gap:2px;}
+.page-toc a{display:flex;align-items:center;gap:9px;background:none;border:none;text-align:left;color:var(--navy);font-family:'Innerspace',sans-serif;font-weight:400;font-size:13px;padding:10px 12px;border-radius:10px;text-decoration:none;transition:all .15s;}
+.page-toc a:hover{background:var(--light);}
+.page-toc a.active{background:var(--blue);color:#fff;font-weight:700;}
+
+@media(max-width:980px){
+  .layout-grid{flex-direction:column;align-items:stretch;}
+  .page-toc{position:static;width:100%;flex-direction:row;overflow-x:auto;}
+}
 
 /* ── SUMMARY CARDS ── */
 .sum-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:22px;}
@@ -128,7 +134,10 @@ td{padding:10px 13px;border-bottom:1px solid var(--border);vertical-align:top;li
 tr:last-child td{border-bottom:none;}
 tr:hover td{background:#F7FAFF;}
 .td-name{min-width:260px;max-width:380px;font-weight:500;}
-.td-act{color:var(--muted);font-size:12px;white-space:nowrap;}
+.td-act{font-size:12px;white-space:nowrap;}
+.act-link{color:var(--blue);text-decoration:none;}
+.act-link:hover{text-decoration:underline;}
+.act-plain{color:var(--muted);}
 .sbadge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;padding:3px 9px;border-radius:8px;white-space:nowrap;}
 .sb-done{background:#EAFAF1;color:#1E8449;}
 .sb-review{background:#FEF9E7;color:#B7770D;}
@@ -137,9 +146,6 @@ tr:hover td{background:#F7FAFF;}
 .src-kmu{background:#EEF2FF;color:var(--blue);}
 .src-mon{background:#FFF3D6;color:#B7770D;}
 .note-flag{display:inline-block;margin-left:6px;font-size:11px;color:var(--red);cursor:help;}
-.doc-link{color:var(--blue);text-decoration:none;font-size:16px;}
-.doc-link:hover{text-decoration:underline;}
-.no-link{color:var(--border);font-size:16px;}
 .empty-row td{text-align:center;color:var(--muted);padding:30px;}
 
 /* ── FOOTER ── */
@@ -149,7 +155,7 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
 
 @media (max-width:768px){
   .hero{padding:40px 20px 48px;}
-  main{padding:20px 12px 60px;}
+  .layout-grid{padding:20px 12px 60px;}
   .res-cnt{margin-left:0;}
 }
 </style>
@@ -189,7 +195,7 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
     <span class="crumb-sep">›</span>
     <a href="normotvorennya.html">Нормотворення</a>
     <span class="crumb-sep">›</span>
-    <a href="#" class="active" onclick="return false;">Моніторинг прийняття</a>
+    <a href="#" class="active" onclick="return false;">Моніторинг затвердження</a>
   </nav>
 </div>
 </div>
@@ -201,12 +207,12 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
 </section>
 
 <!-- MAIN -->
+<div class="layout-grid">
+<aside class="page-toc">
+  <a href="normotvorennya.html">📋 Нормативні документи</a>
+  <a href="normotvorennya-monitoring.html" class="active">📊 Моніторинг затвердження</a>
+</aside>
 <main>
-  <div class="section-tabs">
-    <a href="normotvorennya.html" class="section-tab">📋 Перелік актів</a>
-    <a href="normotvorennya-monitoring.html" class="section-tab active">📊 Моніторинг прийняття</a>
-  </div>
-
   <div class="sum-grid" id="sumGrid"></div>
 
   <div class="prog-card">
@@ -227,7 +233,7 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
     <label>Джерело:</label>
     <select class="fsel" id="fSource">
       <option value="">Усі</option>
-      <option value="КМУ">Постанови КМУ</option>
+      <option value="КМУ">НПА КМУ</option>
       <option value="МОН">Накази МОН</option>
     </select>
     <label>Статус:</label>
@@ -250,13 +256,13 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
           <th>Акт</th>
           <th>Джерело</th>
           <th>Статус</th>
-          <th></th>
         </tr></thead>
         <tbody id="tblBody"></tbody>
       </table>
     </div>
   </div>
 </main>
+</div>
 
 <footer>
   <div class="footer-logo">
@@ -295,7 +301,7 @@ function renderProgress(source, trackId, titleId, titlePrefix) {
   const done = items.filter(d => d.bucket === 'done').length;
   const review = items.filter(d => d.bucket === 'review').length;
   const draft = items.filter(d => d.bucket === 'draft').length;
-  document.getElementById(titleId).textContent = `${titlePrefix} — ${total} акт${total===1?'':(total<5?'и':'ів')} (прийнято ${done} з ${total})`;
+  document.getElementById(titleId).textContent = titlePrefix;
   const track = document.getElementById(trackId);
   track.innerHTML = '';
   const pct = n => total ? (n/total*100) : 0;
@@ -320,7 +326,7 @@ function renderTable() {
 
   const body = document.getElementById('tblBody');
   if (items.length === 0) {
-    body.innerHTML = '<tr class="empty-row"><td colspan="5">Нічого не знайдено</td></tr>';
+    body.innerHTML = '<tr class="empty-row"><td colspan="4">Нічого не знайдено</td></tr>';
     return;
   }
 
@@ -328,19 +334,26 @@ function renderTable() {
     const srcClass = d.source === 'КМУ' ? 'src-kmu' : 'src-mon';
     const badgeClass = BUCKET_BADGE_CLASS[d.bucket] || 'sb-draft';
     const note = d.note ? `<span class="note-flag" title="${escapeHtml(d.note)}">❓</span>` : '';
-    const link = d.link ? `<a class="doc-link" href="${escapeHtml(d.link)}" target="_blank" rel="noopener">↗</a>` : '<span class="no-link">—</span>';
+    const actText = escapeHtml(d.act || '—');
+    const nameText = escapeHtml(d.name);
+    let nameCell = nameText;
+    let actCell = `<span class="act-plain">${actText}</span>`;
+    if (d.link && d.act) {
+      actCell = `<a class="act-link" href="${escapeHtml(d.link)}" target="_blank" rel="noopener">${actText}</a>`;
+    } else if (d.link) {
+      nameCell = `<a class="act-link" href="${escapeHtml(d.link)}" target="_blank" rel="noopener">${nameText}</a>`;
+    }
     return `<tr>
-      <td class="td-name">${escapeHtml(d.name)}</td>
-      <td class="td-act">${escapeHtml(d.act || '—')}</td>
+      <td class="td-name">${nameCell}</td>
+      <td class="td-act">${actCell}</td>
       <td><span class="srcbadge ${srcClass}">${escapeHtml(d.source)}</span></td>
       <td><span class="sbadge ${badgeClass}">${escapeHtml(d.status)}</span>${note}</td>
-      <td>${link}</td>
     </tr>`;
   }).join('');
 }
 
 renderSummary();
-renderProgress('КМУ', 'progKmu', 'progKmuTitle', 'Постанови КМУ');
+renderProgress('КМУ', 'progKmu', 'progKmuTitle', 'Нормативно-правові акти КМУ');
 renderProgress('МОН', 'progMon', 'progMonTitle', 'Накази МОН');
 renderTable();
 
