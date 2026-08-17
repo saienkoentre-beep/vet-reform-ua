@@ -79,6 +79,12 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
 /* ── MAIN ── */
 main{max-width:960px;margin:0 auto;padding:32px 20px 80px;}
 
+/* ── SECTION TABS (Перелік / Моніторинг) ── */
+.section-tabs{display:flex;gap:8px;background:#fff;border-radius:14px;padding:6px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:22px;overflow-x:auto;}
+.section-tab{background:none;border:none;padding:10px 18px;font-family:'Innerspace',sans-serif;font-size:13px;font-weight:400;color:var(--muted);cursor:pointer;border-radius:10px;white-space:nowrap;transition:all .2s;text-decoration:none;display:inline-block;}
+.section-tab.active{background:var(--blue);color:#fff;font-weight:700;}
+.section-tab:hover:not(.active){background:var(--light);color:var(--navy);}
+
 .toolbar{position:sticky;top:0;background:var(--light);padding:16px 0 18px;z-index:50;}
 .search-box{position:relative;}
 .search-box input{width:100%;padding:14px 18px 14px 46px;border-radius:14px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:15px;color:var(--navy);font-family:'Innerspace',sans-serif;}
@@ -168,6 +174,11 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
 
 <!-- MAIN -->
 <main>
+  <div class="section-tabs">
+    <a href="normotvorennya.html" class="section-tab active">📋 Перелік актів</a>
+    <a href="normotvorennya-monitoring.html" class="section-tab">📊 Моніторинг прийняття</a>
+  </div>
+
   <div class="toolbar">
     <div class="search-box">
       <input id="searchInput" type="text" placeholder="Пошук за назвою документа, номером, датою…" autocomplete="off">
