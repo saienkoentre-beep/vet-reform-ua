@@ -122,7 +122,6 @@ header{background:#fff;border-bottom:3px solid var(--blue);padding:12px 32px;dis
 .fsel:focus{border-color:var(--blue);}
 .srch{background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px 13px;font-family:'Innerspace',sans-serif;font-size:13px;color:var(--navy);outline:none;min-width:220px;flex:1;}
 .srch:focus{border-color:var(--blue);}
-.res-cnt{font-size:12px;color:var(--muted);margin-left:auto;white-space:nowrap;}
 
 /* ── TABLE ── */
 .tbl-wrap{background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;}
@@ -156,7 +155,6 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
 @media (max-width:768px){
   .hero{padding:40px 20px 48px;}
   .layout-grid{padding:20px 12px 60px;}
-  .res-cnt{margin-left:0;}
 }
 </style>
 <!-- Google Analytics -->
@@ -252,7 +250,6 @@ footer{background:var(--navy);padding:24px 32px;display:flex;align-items:center;
       <option value="draft">У розробці</option>
     </select>
     <input class="srch" id="fSearch" placeholder="🔍 Пошук за назвою…">
-    <span class="res-cnt" id="resCnt"></span>
   </div>
 
   <div class="tbl-wrap">
@@ -329,8 +326,6 @@ function renderTable() {
     if (q && !d.name.toLowerCase().includes(q)) return false;
     return true;
   });
-
-  document.getElementById('resCnt').textContent = `Показано: ${items.length} з ${DATA.length}`;
 
   const body = document.getElementById('tblBody');
   if (items.length === 0) {
