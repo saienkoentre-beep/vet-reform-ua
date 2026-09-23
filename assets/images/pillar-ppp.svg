@@ -8,6 +8,6 @@
   <rect width="800" height="600" fill="url(#g3)"/>
   <circle cx="680" cy="500" r="200" fill="#FFB800" opacity="0.10"/>
   <circle cx="90" cy="90" r="140" fill="#ffffff" opacity="0.06"/>
-  <circle cx="330" cy="300" r="90" fill="none" stroke="#FFB800" stroke-width="8" opacity="0.9"/>
-  <circle cx="470" cy="300" r="90" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.9"/>
+  <circle cx="330" cy="300" r="90" fill="none" stroke="#FFB800" stroke-width="7" opacity="0.9"/>
+  <circle cx="470" cy="300" r="90" fill="none" stroke="#ffffff" stroke-width="7" opacity="0.5"/>
 </svg>
