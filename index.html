@@ -33,12 +33,16 @@ body {
   background: var(--light);
   color: var(--mon-black);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+main{flex:1 0 auto;width:100%;}
+footer{flex-shrink:0;}
 
 /* ── HEADER ── */
 header {
   background: #fff;
-  border-bottom: 3px solid var(--mon-blue);
+  border-bottom: 1px solid var(--border);
   padding: 12px 32px;
   display: flex;
   align-items: center;
@@ -46,7 +50,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(43,72,255,0.08);
+  box-shadow: 0 1px 3px rgba(8,8,14,0.04);
 }
 .header-logo {
   display: flex;
@@ -54,18 +58,11 @@ header {
   gap: 14px;
   text-decoration: none;
 }
-.header-logo-icon {
-  width: 42px; height: 42px;
-  background: var(--mon-blue);
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
 .header-logo-text h1 {
   font-family: 'Innerspace', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 19px;
+  letter-spacing: -0.01em;
   color: var(--mon-blue);
   line-height: 1.2;
 }
@@ -82,6 +79,7 @@ header {
 .header-nav {
   display: flex;
   gap: 4px;
+  align-items: center;
 }
 .header-nav a {
   font-size: 13px;
@@ -421,13 +419,13 @@ footer {
   main { padding: 40px 16px 60px; }
   header { padding: 10px 16px; position: relative; }
   .mobile-nav-toggle { display: block; }
-  .header-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; gap: 0; padding: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.14); border-top: 1px solid var(--border); z-index: 400; }
+  .header-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch; gap: 0; padding: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.14); border-top: 1px solid var(--border); z-index: 400; }
   .header-nav.mobile-open { display: flex; }
   .header-nav a { padding: 12px 14px; border-radius: 8px; }
   .nav-dropdown-menu { display: block; position: static; box-shadow: none; border: none; padding: 0 0 4px 16px; min-width: 0; }
   .nav-dropdown-menu a { font-size: 13px; color: var(--muted); padding: 9px 14px; }
   .header-partners img { height: 26px; max-width: 150px; }
-  .header-logo-text h1 { font-size: 13px; }
+  .header-logo-text h1 { font-size: 16px; }
 }
 </style>
 </head>
@@ -436,7 +434,6 @@ footer {
 <!-- HEADER -->
 <header>
   <a href="#" class="header-logo">
-    <div class="header-logo-icon">🎓</div>
     <div class="header-logo-text">
       <h1>Реформа професійної освіти</h1>
     </div>
