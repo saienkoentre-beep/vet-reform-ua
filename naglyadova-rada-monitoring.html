@@ -34,7 +34,8 @@
 body{font-family:'Innerspace',sans-serif;font-weight:400;font-weight:400;background:var(--light);color:var(--navy);min-height:100vh;overflow-x:hidden;}
 
 body{display:flex;flex-direction:column;}
-main{flex:1 0 auto;width:100%;}
+body>*{min-width:0;width:100%;}
+main{flex:1 0 auto;width:100%;min-width:0;}
 footer{flex-shrink:0;}
 .header-top{display:flex;align-items:center;justify-content:space-between;padding:10px 24px;border-bottom:1px solid #E8EEFF;}
 .header-title-row{padding:8px 24px;display:flex;align-items:center;gap:12px;background:#FFFFFF;}
@@ -321,7 +322,9 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
 #monitoring .res-cnt{font-size:12px;color:#8A9BB5;margin-left:auto;}
 #monitoring .tbl-wrap{background:#fff;border-radius:14px;box-shadow:0 4px 24px rgba(11,31,58,0.10);border:1px solid #D6E0EF;overflow:hidden;}
 #monitoring .tbl-hdr{background:#2B48FF;color:white;padding:13px 18px;font-family:'Innerspace',sans-serif;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center;}
-#monitoring .tbl-scroll{overflow-x:auto;}
+#monitoring .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:linear-gradient(to right, #fff 30%, rgba(255,255,255,0)) 0 0,linear-gradient(to right, rgba(255,255,255,0), #fff 70%) 100% 0,linear-gradient(to right, rgba(11,31,58,.12), rgba(11,31,58,0)) 0 0,linear-gradient(to left, rgba(11,31,58,.12), rgba(11,31,58,0)) 100% 0;background-repeat:no-repeat;background-size:24px 100%,24px 100%,10px 100%,10px 100%;background-attachment:local,local,scroll,scroll;}
+#monitoring .tbl-scroll-hint{display:none;font-size:11px;color:var(--muted);padding:6px 18px;background:var(--light);border-bottom:1px solid var(--border);}
+@media(max-width:640px){#monitoring .tbl-scroll-hint{display:block;}}
 #monitoring table{width:100%;border-collapse:collapse;font-size:13px;}
 #monitoring th{background:#F5F5F7;padding:10px 13px;text-align:left;font-size:11px;font-weight:700;color:#8A9BB5;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid #D6E0EF;white-space:nowrap;cursor:pointer;}
 #monitoring th:hover{background:#E8EEFF;}
@@ -402,6 +405,7 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
     </div>
     <div class="tbl-wrap">
       <div class="tbl-hdr"><span>🏫 Заклади професійної освіти</span><span id="zaklTotal" style="font-size:11px;opacity:.6;"></span></div>
+      <div class="tbl-scroll-hint">↔ Гортайте таблицю вбік, щоб побачити всі стовпці</div>
       <div class="tbl-scroll">
         <table><thead><tr>
           <th onclick="srt('name')">Назва закладу ↕</th>
@@ -441,6 +445,7 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
     </div>
     <div class="tbl-wrap">
       <div class="tbl-hdr"><span>📋 Моніторинг затвердження нормативних документів</span></div>
+      <div class="tbl-scroll-hint">↔ Гортайте таблицю вбік, щоб побачити всі стовпці</div>
       <div class="tbl-scroll">
         <table><thead><tr>
           <th>Область</th><th>Засновник (упов. орг)</th><th>Нормативний документ</th>
