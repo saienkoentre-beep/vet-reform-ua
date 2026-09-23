@@ -187,6 +187,12 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
 .nav-dropdown-menu a.active{color:var(--blue);font-weight:700;}
 .header-nav a.active{color:var(--blue);font-weight:700;}
 .header-partners img{height:36px;object-fit:contain;}
+.footer-logo{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.footer-logo-light{display:flex;align-items:center;gap:12px;background:#fff;padding:6px 14px;border-radius:10px;}
+.footer-logo-sep{width:1px;height:22px;background:#E5E7EB;}
+.footer-mon-logo{height:26px;object-fit:contain;}
+.footer-komanda-logo{height:34px;object-fit:contain;}
+.footer-ura-logo{height:32px;object-fit:contain;}
 
 /* ── SECONDARY BREADCRUMB NAV ── */
 .site-subheader{background:#fff;border-bottom:1px solid var(--border);}
@@ -347,7 +353,14 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
 </div>
 
 <footer style="background:#08080E;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-  <img src="assets/logo-all.png" alt="Логотипи партнерів" style="height:36px;object-fit:contain;background:white;padding:4px 8px;border-radius:6px;">
+  <div class="footer-logo">
+    <div class="footer-logo-light">
+      <img src="assets/images/mon-logo.png" alt="Міністерство освіти і науки України" class="footer-mon-logo">
+      <span class="footer-logo-sep"></span>
+      <img src="assets/images/komanda-logo.png" alt="Команда підтримки реформ МОН" class="footer-komanda-logo">
+    </div>
+    <img src="assets/images/ura-logo-dark.png" alt="URA — Ukraine Recovery and Reform Architecture" class="footer-ura-logo">
+  </div>
   <span style="font-family:'Innerspace',sans-serif;font-size:13px;color:rgba(255,255,255,0.6);">© 2026 Команда підтримки реформ МОН України</span>
 </footer>
 
