@@ -62,6 +62,18 @@ header {
   z-index: 100;
   box-shadow: 0 1px 3px rgba(8,8,14,0.04);
 }
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-left::after {
+  content: '';
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+  margin-left: 2px;
+}
 .header-logo {
   display: flex;
   align-items: center;
@@ -438,11 +450,16 @@ footer {
 
 <!-- HEADER -->
 <header>
+  <div class="header-left">
   <a href="#" class="header-logo">
     <div class="header-logo-text">
       <h1>Реформа професійної освіти</h1>
     </div>
   </a>
+  <div class="header-partners">
+    <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
+  </div>
+  </div>
   <div class="header-right">
     <nav class="header-nav">
       <a href="index.html">Головна</a>
@@ -462,9 +479,6 @@ footer {
         </div>
       </div>
     </nav>
-    <div class="header-partners">
-      <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
-    </div>
     <button class="mobile-nav-toggle" aria-label="Відкрити меню">☰</button>
   </div>
 </header>

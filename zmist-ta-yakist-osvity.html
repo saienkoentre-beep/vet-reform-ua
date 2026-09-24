@@ -46,6 +46,8 @@ footer{flex-shrink:0;}
 /* ── SITE-WIDE HEADER ── */
 .site-header-group{position:sticky;top:0;z-index:200;}
 header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 3px rgba(8,8,14,0.04);}
+.header-left{display:flex;align-items:center;gap:20px;}
+.header-left::after{content:'';width:1px;height:28px;background:var(--border);margin-left:2px;}
 .header-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
 .header-logo-text h1{font-family:'Innerspace',sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.01em;color:var(--blue);line-height:1.2;}
 .header-right{display:flex;align-items:center;gap:20px;}
@@ -122,9 +124,14 @@ footer{background:var(--navy);padding:40px 48px;display:flex;align-items:center;
 
 <div class="site-header-group">
 <header>
+  <div class="header-left">
   <a class="header-logo" href="index.html">
     <div class="header-logo-text"><h1>Реформа професійної освіти</h1></div>
   </a>
+  <div class="header-partners">
+    <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
+  </div>
+  </div>
   <div class="header-right">
     <nav class="header-nav">
       <a href="index.html">Головна</a>
@@ -144,9 +151,6 @@ footer{background:var(--navy);padding:40px 48px;display:flex;align-items:center;
         </div>
       </div>
     </nav>
-    <div class="header-partners">
-      <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
-    </div>
     <button class="mobile-nav-toggle" aria-label="Відкрити меню">☰</button>
   </div>
 </header>
