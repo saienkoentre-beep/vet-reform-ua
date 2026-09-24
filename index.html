@@ -408,12 +408,9 @@ footer {
   gap: 20px;
   flex-wrap: wrap;
 }
-.footer-logo { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.footer-logo-light { display: flex; align-items: center; gap: 12px; background: #fff; padding: 6px 14px; border-radius: 10px; }
-.footer-logo-sep { width: 1px; height: 22px; background: #E5E7EB; }
-.footer-mon-logo { height: 26px; object-fit: contain; }
-.footer-komanda-logo { height: 34px; object-fit: contain; }
-.footer-ura-logo { height: 28px; object-fit: contain; }
+.footer-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.footer-links a{color:rgba(255,255,255,0.75);font-size:12px;text-decoration:none;white-space:nowrap;transition:color .15s;}
+.footer-links a:hover{color:var(--mon-yellow);text-decoration:underline;}
 .footer-text {
   font-size: 13px;
   color: rgba(255,255,255,0.5);
@@ -562,16 +559,13 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <div class="footer-logo-light">
-      <img src="assets/images/mon-logo.png" alt="Міністерство освіти і науки України" class="footer-mon-logo">
-      <span class="footer-logo-sep"></span>
-      <img src="assets/images/komanda-logo.png" alt="Команда підтримки реформ МОН" class="footer-komanda-logo">
-      <span class="footer-logo-sep"></span>
-      <img src="assets/images/ura-logo.png" alt="URA — Ukraine Recovery and Reform Architecture" class="footer-ura-logo">
-    </div>
+  <div class="footer-links">
+    <a href="https://mon.gov.ua/" target="_blank" rel="noopener">Міністерство освіти і науки України</a>
+    <a href="https://nqa.gov.ua/" target="_blank" rel="noopener">Національне агентство кваліфікацій</a>
+    <a href="https://info.edbo.gov.ua/" target="_blank" rel="noopener">Єдина державна електронна база з питань освіти</a>
+    <a href="https://college.in.ua/" target="_blank" rel="noopener">Професійний коледж</a>
   </div>
-  <div class="footer-text">© 2026 Команда підтримки реформ МОН України</div>
+  <div class="footer-text">© 2026 Команда підтримки відновлення та реформ МОН України</div>
 </footer>
 
 <script src="assets/js/site.js" defer></script>
