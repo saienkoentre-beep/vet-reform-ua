@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600">
+  <defs>
+    <linearGradient id="gPR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080E"/>
+      <stop offset="100%" stop-color="#2B48FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#gPR)"/>
+  <circle cx="220" cy="520" r="260" fill="#ffffff" opacity="0.05"/>
+  <circle cx="1400" cy="90" r="220" fill="#FFB800" opacity="0.10"/>
+  <g stroke="#ffffff" stroke-width="7" opacity="0.5" fill="none">
+    <rect x="700" y="190" width="200" height="240" rx="10"/>
+    <line x1="740" y1="250" x2="860" y2="250"/>
+    <line x1="740" y1="290" x2="860" y2="290"/>
+    <line x1="740" y1="330" x2="820" y2="330"/>
+  </g>
+  <circle cx="800" cy="150" r="18" fill="#FFB800"/>
+</svg>
