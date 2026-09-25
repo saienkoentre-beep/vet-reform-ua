@@ -48,8 +48,6 @@ footer{flex-shrink:0;}
 header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 3px rgba(8,8,14,0.04);}
 .header-left{display:flex;align-items:center;gap:20px;}
 .header-left::after{content:'';width:1px;height:28px;background:var(--border);margin-left:2px;}
-.header-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
-.header-logo-text h1{font-family:'Innerspace',sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.01em;color:var(--blue);line-height:1.2;}
 .header-right{display:flex;align-items:center;gap:20px;}
 .header-nav{display:flex;gap:4px;align-items:center;}
 .header-nav a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all 0.2s;white-space:nowrap;}
@@ -61,7 +59,7 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
 .nav-dropdown-menu a:hover{background:var(--light);color:var(--blue);}
 .nav-dropdown-menu a.active{color:var(--blue);font-weight:700;}
 .header-nav a.active{color:var(--blue);font-weight:700;}
-.header-partners img{height:36px;object-fit:contain;}
+.header-partners img{height:54px;object-fit:contain;}
 
 /* ── SECONDARY BREADCRUMB NAV ── */
 .site-subheader{background:#fff;border-bottom:1px solid var(--border);}
@@ -80,8 +78,7 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
   .header-nav a{padding:12px 14px;border-radius:8px;}
   .nav-dropdown-menu{display:block;position:static;box-shadow:none;border:none;padding:0 0 4px 16px;min-width:0;}
   .nav-dropdown-menu a{font-size:13px;color:var(--muted);padding:9px 14px;}
-  .header-partners img{height:26px;max-width:150px;}
-  .header-logo-text h1{font-size:16px;}
+  .header-partners img{height:39px;max-width:225px;}
 }
 
 /* ── HERO ── */
@@ -125,16 +122,14 @@ footer{background:var(--navy);padding:40px 48px;display:flex;align-items:center;
 <div class="site-header-group">
 <header>
   <div class="header-left">
-  <a class="header-logo" href="index.html">
-    <div class="header-logo-text"><h1>Реформа професійної освіти</h1></div>
+  <a href="index.html" class="header-partners">
+    <img src="assets/logo-all.png" alt="Реформа професійної освіти" style="height:54px;object-fit:contain;">
   </a>
-  <div class="header-partners">
-    <img src="assets/logo-all.png" alt="Партнери" style="height:36px;object-fit:contain;">
-  </div>
   </div>
   <div class="header-right">
     <nav class="header-nav">
       <a href="index.html">Головна</a>
+      <a href="pro-reformu.html">Про реформу</a>
       <div class="nav-dropdown">
         <a href="normotvorennya.html">Нормотворення</a>
         <div class="nav-dropdown-menu">
@@ -142,7 +137,7 @@ footer{background:var(--navy);padding:40px 48px;display:flex;align-items:center;
           <a href="normotvorennya-monitoring.html">Стан затвердження</a>
         </div>
       </div>
-      <a href="zmist-ta-yakist-osvity.html">Зміст та якість освіти</a>
+      <a href="zmist-ta-yakist-osvity.html">Зміст освіти</a>
       <div class="nav-dropdown">
         <a href="publichno-pryvatne-partnerstvo.html">Публічно-приватне партнерство</a>
         <div class="nav-dropdown-menu">
