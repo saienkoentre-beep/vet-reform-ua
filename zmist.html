@@ -94,10 +94,16 @@ main{max-width:1200px;margin:0 auto;padding:56px 24px 80px;}
 .module-card{background:#fff;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;text-decoration:none;color:inherit;position:relative;}
 .module-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--blue);}
 .module-photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--light);}
-.module-card h3{font-family:'Innerspace',sans-serif;font-weight:700;font-size:17px;color:var(--navy);line-height:1.35;text-align:center;padding:20px 22px;}
+.module-card h3{font-family:'Innerspace',sans-serif;font-weight:700;font-size:17px;color:var(--navy);line-height:1.35;text-align:center;padding:20px 22px 8px;}
+.module-icon-tile{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#08080E 0%,#2B48FF 100%);position:relative;overflow:hidden;}
+.module-icon-tile::before{content:'';position:absolute;top:-40px;right:-40px;width:140px;height:140px;border-radius:50%;background:#FFB800;opacity:0.10;}
+.module-icon-tile::after{content:'';position:absolute;bottom:-50px;left:-50px;width:160px;height:160px;border-radius:50%;background:#fff;opacity:0.05;}
+.module-card .ext-badge{position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.92);color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;z-index:2;}
+.module-card .module-desc{font-size:13px;color:var(--muted);text-align:center;padding:0 22px;line-height:1.5;flex:1;}
+.module-card .ext-link-tag{display:block;text-align:center;font-family:'Innerspace',sans-serif;font-weight:700;font-size:12px;color:var(--blue);padding:16px 22px 22px;}
 
 /* ── COMING SOON NOTICE ── */
-.notice-card{max-width:640px;margin:0 auto;background:#fff;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow);padding:40px 32px;text-align:center;}
+.notice-card{max-width:640px;margin:40px auto 0;background:#fff;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow);padding:40px 32px;text-align:center;}
 .notice-icon{font-size:34px;margin-bottom:14px;}
 .notice-card h3{font-family:'Innerspace',sans-serif;font-weight:700;font-size:18px;color:var(--navy);margin-bottom:10px;}
 .notice-card p{font-size:14px;color:var(--muted);line-height:1.6;}
@@ -166,10 +172,26 @@ footer{background:var(--navy);padding:40px 48px;display:flex;align-items:center;
 
 <!-- MAIN -->
 <main>
+  <div class="modules-grid">
+
+    <a href="https://mon.gov.ua/osvita-2/profesiyno-tekhnichna-osvita/reforma-profesiynoi-osviti/zmist-profesiynoi-osviti-osvitni-standarti-programi-informatsiya-dlya-uchniv-ta-pedagogiv/osvitni-standarti-navchalni-plani-ta-programi" target="_blank" rel="noopener" class="module-card">
+      <img class="module-photo" src="assets/images/zmist-standards-photo.jpg" alt="Освітні стандарти, навчальні плани та програми">
+      <span class="ext-badge">↗ mon.gov.ua</span>
+      <h3>Освітні стандарти, навчальні плани та програми</h3>
+      <span class="ext-link-tag">Перейти</span>
+    </a>
+
+    <a href="https://profosvita.online/" target="_blank" rel="noopener" class="module-card">
+      <img class="module-photo" src="assets/images/zmist-online-photo.jpg" alt="Професійна освіта онлайн">
+      <span class="ext-badge">↗ profosvita.online</span>
+      <h3>Професійна освіта онлайн</h3>
+      <span class="ext-link-tag">Перейти</span>
+    </a>
+
+  </div>
+
   <div class="notice-card">
-    <div class="notice-icon">🚧</div>
-    <h3>Розділ у розробці</h3>
-    <p>Матеріали за цим напрямком реформи наразі готуються та з'являться тут найближчим часом.</p>
+    <p>Інші матеріали за цим напрямком реформи наразі готуються та з'являться тут найближчим часом.</p>
   </div>
 </main>
 
