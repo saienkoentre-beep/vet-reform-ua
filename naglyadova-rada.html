@@ -169,15 +169,18 @@ tr:hover td{background:#F7FAFF;}
 
 .layout-grid{max-width:1400px;margin:0 auto;padding:28px 20px 60px;display:flex;align-items:flex-start;gap:24px;}
 .layout-grid > main{flex:1;min-width:0;padding:0;}
-.page-toc{width:230px;flex-shrink:0;position:sticky;top:130px;background:#fff;border-radius:16px;border:1px solid #E5E7EB;box-shadow:0 4px 24px rgba(8,8,14,0.08);padding:10px;display:flex;flex-direction:column;gap:2px;}
+.sidebar-col{width:230px;flex-shrink:0;position:sticky;top:130px;display:flex;flex-direction:column;gap:16px;}
+.page-toc{background:#fff;border-radius:16px;border:1px solid #E5E7EB;box-shadow:0 4px 24px rgba(8,8,14,0.08);padding:10px;display:flex;flex-direction:column;gap:2px;}
 .page-toc-title{font-family:'Innerspace',sans-serif;font-weight:700;font-size:11px;color:#8A9BB5;text-transform:uppercase;letter-spacing:.5px;padding:10px 12px 6px;}
 .page-toc a{display:flex;align-items:center;gap:9px;background:none;border:none;text-align:left;color:#08080E;font-family:'Innerspace',sans-serif;font-weight:400;font-size:13px;padding:10px 12px;border-radius:10px;text-decoration:none;transition:all .15s;}
 .page-toc a:hover{background:#F5F5F7;}
 .page-toc a.active{background:#2B48FF;color:#fff;font-weight:700;}
+.toc-promo{background:#fff;border-radius:16px;border:1px solid #E5E7EB;box-shadow:0 4px 24px rgba(8,8,14,0.08);padding:14px;}
 
 @media(max-width:980px){
   .layout-grid{flex-direction:column;align-items:stretch;}
-  .page-toc{position:static;width:100%;flex-direction:row;overflow-x:auto;}
+  .sidebar-col{position:static;width:100%;}
+  .page-toc{flex-direction:row;overflow-x:auto;}
 }
 
 /* ── SITE-WIDE HEADER (unified pillar nav) ── */
@@ -267,6 +270,7 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
 </div>
 
 <div class="layout-grid">
+<div class="sidebar-col">
 <aside class="page-toc">
   <a href="naglyadova-rada.html" class="active">🏠 Огляд</a>
   <a href="naglyadova-rada-about.html">ℹ️ Про наглядову раду</a>
@@ -276,6 +280,14 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:12px 32px;d
   <a href="naglyadova-rada-legal.html">⚖️ Нормативна база</a>
   <a href="naglyadova-rada-monitoring.html">📊 Моніторинг</a>
 </aside>
+
+<div id="tocPromo" class="toc-promo" style="padding-bottom:29px;">
+  <div style="position:relative;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);">
+    <img src="assets/images/putivnyk-naglyadova-rada-cover.png" alt="Путівник для членів наглядових рад: створення та організація діяльності наглядових рад у закладах професійної освіти" style="width:100%;height:auto;display:block;">
+    <a href="assets/docs/putivnyk-naglyadova-rada.pdf" target="_blank" style="position:absolute;left:12px;right:12px;bottom:14px;display:flex;align-items:center;justify-content:center;gap:6px;background:#2B48FF;color:white;text-decoration:none;border-radius:8px;padding:9px 10px;font-size:11.5px;font-weight:500;box-shadow:0 4px 14px rgba(0,0,0,0.3);">📥 Завантажити</a>
+  </div>
+</div>
+</div>
 
 <main>
 
