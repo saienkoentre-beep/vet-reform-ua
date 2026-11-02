@@ -539,7 +539,7 @@ function renderOverview(){
     <div class="sum-card c-total"><div class="sum-num">${s.total}</div><div class="sum-label">Закладів у моніторингу</div></div>
     <div class="sum-card c-done"><div class="sum-num">${s.done}</div><div class="sum-label">🟢 НР сформовано</div></div>
     <div class="sum-card c-prog"><div class="sum-num">${s.prog}</div><div class="sum-label">🟡 В процесі</div></div>
-    <div class="sum-card c-delay"><div class="sum-num">${s.delay}</div><div class="sum-label">🔴 Затримка</div></div>
+    ${s.delay?`<div class="sum-card c-delay"><div class="sum-num">${s.delay}</div><div class="sum-label">🔴 Затримка</div></div>`:''}
     <div class="sum-card c-pend"><div class="sum-num">${s.pend}</div><div class="sum-label">🔵 Не розпочато</div></div>
     <div class="sum-card c-total"><div class="sum-num">${s.total>0?Math.round(s.done/s.total*100):0}%</div><div class="sum-label">Загальний прогрес</div></div>`;
   document.getElementById('mainBar').innerHTML=`
