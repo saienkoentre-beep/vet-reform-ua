@@ -565,7 +565,7 @@ function renderReg(){
   const regions=[...new Set(ZAKLADY.map(d=>d.region))].sort();
   const show=sel?[sel]:regions;
   document.getElementById('rgDetail').innerHTML=show.map(r=>
-    buildRegCard(r, ZAKLADY.filter(d=>d.region===r), false)
+    buildRegCard(r, ZAKLADY.filter(d=>d.region===r), true)
   ).join('');
 }
 
